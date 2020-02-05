@@ -14,6 +14,15 @@ module.exports = (on, config) => {
   //  watchOptions: {}
   // }))
 
+  // on('before:browser:launch', (browser = {}, args) => {
+  //   if (browser.name === 'chrome') {
+  //     // args.push('--disable-features=VizDisplayCompositor')
+  //     // args.unshift('--disable-features=VizDisplayCompositor');
+
+  //     return args
+  //   }
+  // })
+
   return Object.assign({}, config, {
     fixturesFolder: "tests/e2e/fixtures",
     integrationFolder: "tests/e2e/specs",

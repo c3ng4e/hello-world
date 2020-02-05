@@ -8,6 +8,7 @@
         >vue-cli documentation</a
       >.
     </p>
+    <Derp></Derp>
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li>
@@ -128,10 +129,19 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import Derp from "@/components/Derp.vue";
 
-@Component
+@Component({
+  components: {
+    Derp
+  }
+})
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
+
+  derp() {
+    alert(this.msg);
+  }
 }
 </script>
 
